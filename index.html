@@ -72,12 +72,12 @@
 	</div>
 	<div class="row right"><a href="#">more&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a></div>
 	<div class="row center">
-		<button class="connectButton" disabled onclick="javascript:window.location.href='map.html'">CONNECT</button>
+		<button class="connectButton" disabled onclick="javascript:window.location.href='map.html'+'?fc='+friendCount">CONNECT</button>
 	</div>
 </DIV>
 
 <script type="text/javascript">
-	
+	var friendCount=0
 	$("img").click(function(){
 		if($(this).attr('src')=="images/icons/friend.png"){
 			$(this).attr("src","images/icons/friend-selected.png");
