@@ -40,8 +40,9 @@ function timer()
   }
 var minutes = Math.floor(count / 60);
 var seconds =  Math.floor(count-minutes*60);
+var fseconds = seconds.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
 
- document.getElementById("timer").innerHTML=minutes +":"+seconds;
+ document.getElementById("timer").innerHTML=minutes +":"+fseconds;
 }
 	</SCRIPT>
 </html>
