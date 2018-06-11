@@ -16,11 +16,32 @@
 <body>
 <DIV class="container app-panel">
 	<div class="row">
-		<button>cancel</button> <span id="timer" class="timer">30:00</span>
+		<button>CANCEL</button> <span id="timer" class="timer">30:00</span>
 	</div>
+	
 	<div class="row map">
 		<img src="images/map.png">
 	</div>
 	
 </body>
+<SCRIPT>
+var count=1800;
+
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+function timer()
+{
+  count=count-1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     //counter ended, do something here
+     return;
+  }
+var minutes = Math.floor(count / 60);
+var seconds =  Math.floor(count-minutes*60);
+
+ document.getElementById("timer").innerHTML=minutes +":"+seconds;
+}
+	</SCRIPT>
 </html>

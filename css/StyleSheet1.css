@@ -46,3 +46,8 @@ button{
 	overflow-x: scroll;
 	overflow-y: scroll;
 }
+#timer{
+	width:82%;
+	text-align:right;
+
+}
