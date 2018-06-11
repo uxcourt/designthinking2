@@ -1,0 +1,1 @@
+var friendCount=0;

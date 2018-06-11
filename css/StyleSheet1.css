@@ -1,0 +1,48 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Cabin|Raleway:300,400,700,900');
+body
+{
+    font-family: 'Raleway', sans-serif;
+}
+h1{
+font-family: 'Cabin', sans-serif;
+font-weight: 300;
+}
+h2{
+font-family: 'Cabin', sans-serif;
+font-weight: 400;
+}
+h3{
+font-family: 'Cabin', sans-serif;
+font-weight: 400;
+}
+figure{
+	font-family: 'Raleway', sans-serif;
+	font-variant: italic;
+	font-size: .8rem
+}
+button{
+	font-family: Cabin;
+	font-weight: 900;
+	background-color: #ffffff;
+	border:1px #666 solid;
+	min-height: 44px;
+}
+.friend{
+	text-align:center;
+}
+.app-panel{max-width:400px;}
+.center{
+	width:100%;
+	text-align:center;
+	justify-content: center;
+}
+.center h1{width:100%;}
+.right{float: right;}
+.connectButton{
+	position:fixed;
+	bottom:40px;
+}
+.map{
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
