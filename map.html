@@ -18,8 +18,7 @@ var count=1800;
 
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
-function timer()
-{
+function timer(){
   count=count-1;
   if (count <= 0)
   {
@@ -27,18 +26,65 @@ function timer()
      //counter ended, do something here
      return;
   }
-var minutes = Math.floor(count / 60);
-var seconds =  Math.floor(count-minutes*60);
-var fseconds = seconds.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+	var minutes = Math.floor(count / 60);
+	var seconds =  Math.floor(count-minutes*60);
+	var fseconds = seconds.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
 
- document.getElementById("timer").innerHTML=minutes +":"+fseconds;
+ 	document.getElementById("timer").innerHTML=minutes +":"+fseconds;
 }
+
 var fCount=location.search.substr(location.search.indexOf("=")+1)
+
 function placeFriends(){
 	for (i=0;i<fCount;i++){
-	$("#map").append('<img src="images/icons/friend-map.png" alt="friend" id="f'+ i +'"/>');
+	$("#map").append('<img src="images/icons/friend-map.png" alt="friend" height="15px" id="f'+ i +'"/>');
 	}
 }
+
+function moveMeeting(e){
+	//alert('hi');
+	// determine event object
+	if (!e) {
+		var e = window.event;
+	}
+    if(e.preventDefault) e.preventDefault();
+
+	// IE uses srcElement, others use target
+	targ = e.target ? e.target : e.srcElement;
+
+	if (targ.id != 'meeting') {return};
+	// calculate event X, Y coordinates
+		offsetX = e.clientX;
+		offsetY = e.clientY;
+
+	// assign default values for top and left properties
+	if(!targ.style.left) { targ.style.left='210px'};
+	if (!targ.style.top) { targ.style.top='-390px'};
+
+	// calculate integer values for top and left 
+	// properties
+	coordX = parseInt(targ.style.left);
+	coordY = parseInt(targ.style.top);
+	drag = true;
+
+	// move element
+	document.onmousemove=dragImg;
+    return false;
+	
+}
+function dragImg(e) {
+	if (!drag) {return};
+	if (!e) { var e= window.event};
+	// var targ=e.target?e.target:e.srcElement;
+	// move div element
+	targ.style.left=coordX+e.clientX-offsetX+'px';
+	targ.style.top=coordY+e.clientY-offsetY+'px';
+	return false;
+}
+function stopDrag() {
+	drag=false;
+}
+
 
 </script>
 	<title>Connect</title>
@@ -51,7 +97,7 @@ function placeFriends(){
 	
 	<div class="row map" id="map">
 		<img src="images/map.png">
-		<img src="images/icons/meeting.png" id="meeting" alt="meeting"/>
+		<img src="images/icons/meeting.png" id="meeting" alt="meeting" onmousedown="moveMeeting()" onmouseup="stopDrag()" />
 	</div>
 	
 </body>

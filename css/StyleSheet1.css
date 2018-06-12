@@ -25,7 +25,7 @@ button{
 	font-weight: 900;
 	background-color: #ffffff;
 	border:1px #666 solid;
-	min-height: 44px;
+	/*min-height: 44px;*/
 }
 .friend{
 	text-align:center;
