@@ -86,9 +86,18 @@ function dragImg(e) {
 }
 function stopDrag() {
 	drag=false;
-	$("#newMeeting")[0].style.height="110px";
+	$("#newMeeting")[0].style.height="110px";//animates the appearance of the confirmation
 }
 
+function no2MeetingMoveConf(){
+	$("#newMeeting")[0].style.height="0";
+	$("#meeting")[0].style.top="-390px"
+	$("#meeting")[0].style.left="210px"
+}
+function yes2MeetingMoveConf(){
+	$("#newMeeting")[0].style.height="0";
+	$("#meeting")[0].src="images/icons/meeting-proposed.png";
+}
 
 </script>
 	<title>Connect</title>
@@ -101,17 +110,20 @@ function stopDrag() {
 	
 	<div class="row map" id="map">
 		<img src="images/map.png">
-		<img src="images/icons/meeting.png" id="meeting" alt="meeting" onmousedown="moveMeeting()" onmouseup="stopDrag()" ontouchmove="moveMeeting()" />
+		<img src="images/icons/meeting.png" id="meeting" alt="meeting" onmousedown="moveMeeting()" onmouseup="stopDrag()" />
 	</div>
 	
 	<div id="newMeeting" class="center">
 		<p>Do you want to meet here instead?</p>
 		<div class="center">
-			<button>No</button>
-			<button>Yes</button>
+			<button onclick="no2MeetingMoveConf()">No</button>
+			<button onclick="yes2MeetingMoveConf()">Yes</button>
 		</div>
 		
 	</div>
+	<script>
+		//$("#meeting")[0].addEventListener('touchstart', moveMeeting()); failed attempt to trap touch events; will come back to it.
+	</script>
 </body>
 
 </html>
