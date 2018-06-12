@@ -66,3 +66,12 @@ button{
 #f11{top:-586px;left:123px;}
 #f12{top:-432px;left:200px;}
 #meeting{top:-390px; left:210px;}
+#newMeeting{
+	width: 411px;
+	height:0px;
+	transition: height 1s ease-in-out;
+	position:fixed;
+	bottom:0px;
+	left:0;
+	background-color: #ffffff;
+}

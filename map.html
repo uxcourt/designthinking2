@@ -54,8 +54,11 @@ function moveMeeting(e){
 
 	if (targ.id != 'meeting') {return};
 	// calculate event X, Y coordinates
+		/*offsetX = e.touches[0].clientX;
+		offsetY = e.touches[0].clientY;*/
 		offsetX = e.clientX;
 		offsetY = e.clientY;
+
 
 	// assign default values for top and left properties
 	if(!targ.style.left) { targ.style.left='210px'};
@@ -83,6 +86,7 @@ function dragImg(e) {
 }
 function stopDrag() {
 	drag=false;
+	$("#newMeeting")[0].style.height="110px";
 }
 
 
@@ -97,9 +101,17 @@ function stopDrag() {
 	
 	<div class="row map" id="map">
 		<img src="images/map.png">
-		<img src="images/icons/meeting.png" id="meeting" alt="meeting" onmousedown="moveMeeting()" onmouseup="stopDrag()" />
+		<img src="images/icons/meeting.png" id="meeting" alt="meeting" onmousedown="moveMeeting()" onmouseup="stopDrag()" ontouchmove="moveMeeting()" />
 	</div>
 	
+	<div id="newMeeting" class="center">
+		<p>Do you want to meet here instead?</p>
+		<div class="center">
+			<button>No</button>
+			<button>Yes</button>
+		</div>
+		
+	</div>
 </body>
 
 </html>
