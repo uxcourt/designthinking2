@@ -37,7 +37,7 @@ var fCount=location.search.substr(location.search.indexOf("=")+1)
 
 function placeFriends(){
 	for (i=0;i<fCount;i++){
-	$("#map").append('<img src="images/icons/friend-map.png" alt="friend" height="15px" id="f'+ i +'"/>');
+	$("#friendStaging").append('<img src="images/icons/friend-map.png" alt="friend" height="15px" id="f'+ i +'"/>');
 	}
 }
 
@@ -104,14 +104,18 @@ function yes2MeetingMoveConf(){
 </head>
 <body onload="placeFriends()">
 <DIV class="container app-panel">
-	<div class="row">
+	<div id="timerRow">
 		<button onclick="javascript:window.location.href='index.html'">CANCEL</button> <span id="timer" class="timer">30:00</span>
 	</div>
 	
 	<div class="map" id="map">
 		<img src="images/map.png">
-		<img src="images/icons/meeting.png" id="meeting" alt="meeting" onmousedown="moveMeeting()" onmouseup="stopDrag()" />
+		
+		<div id="friendStaging">
+			<img src="images/icons/meeting.png" id="meeting" alt="meeting" onmousedown="moveMeeting()" onmouseup="stopDrag()" />
+		</div>
 	</div>
+	
 	
 	<div id="newMeeting" class="center">
 		<p>Do you want to meet here instead?</p>

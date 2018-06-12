@@ -45,11 +45,24 @@ button{
 .map{
 	overflow-x: scroll;
 	overflow-y: scroll;
+	width:411px;
+	height: 731px;
 }
 #timer{
-	width:82%;
 	text-align:right;
-
+	float:right;
+	margin-right:20px;
+}
+#timerRow{
+	width:411px;
+	height:44px;
+	position:fixed;
+	top:0;
+	z-index:2;
+	background-color: #ffffff;
+}
+#friendStaging{
+	height:0;
 }
 #map img{position:relative;}
 #f0{top:-380px;left:160px;}
