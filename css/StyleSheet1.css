@@ -72,6 +72,7 @@ button{
 	transition: height 1s ease-in-out;
 	position:fixed;
 	bottom:0px;
-	left:0;
+	
+	margin-left:"-15px";
 	background-color: #ffffff;
 }
