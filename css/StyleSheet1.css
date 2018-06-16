@@ -65,7 +65,7 @@ button{
 	height:0;
 }
 #map img{position:relative;}
-#f0{width:25px;height:25px;top:-380px;left:160px;}
+#f0{width:25px;height:25px;top:-280px;left:60px;}
 #f1{width:25px;height:25px;top:-600px;left:40px;}
 #f2{width:25px;height:25px;top:-700px;left:90px;}
 #f3{width:25px;height:25px;top:-200px;left:120px;}
@@ -75,9 +75,9 @@ button{
 #f7{width:25px;height:25px;top:-275px;left:95px;}
 #f8{width:25px;height:25px;top:-800px;left:47px;}
 #f9{width:25px;height:25px;top:-523px;left:90px;}
-#f10{width:25px;height:25px;top:-222px;left:22px;}
+#f10{width:25px;height:25px;top:-122px;left:22px;}
 #f11{width:25px;height:25px;top:-586px;left:123px;}
-#f12{width:25px;height:25px;top:-432px;left:200px;}
+#f12{width:25px;height:25px;top:-232px;left:300px;}
 #meeting{top:-390px; left:210px;}
 #newMeeting{
 	width: 411px;
@@ -88,4 +88,34 @@ button{
 	
 	margin-left:"-15px";
 	background-color: #ffffff;
+}
+#proposeTime{
+	position:absolute;
+	top:0;
+    width: 411px;
+    height: 714px;
+	background-color: rgba(0,0,0,0.2);
+	z-index:4;
+	display:none;
+}
+#timePanel{
+	display:block;
+	position:relative;
+	left:80px;
+	top:244px;
+	z-index:5;
+	width:250px;
+	height:170px;
+	background-color: #ffffff;
+	padding:20px;
+}
+#timerControls input{
+	width:40px;
+	margin-left:81px;
+}
+#timePanel button{
+	margin-top:20px;
+}
+#timePanel button:last-of-type{
+	float:right;
 }

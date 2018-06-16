@@ -98,6 +98,14 @@ function yes2MeetingMoveConf(){
 	$("#newMeeting")[0].style.height="0";
 	$("#meeting")[0].src="images/icons/meeting-proposed.png";
 }
+function showTimerUpdate(){
+	$("#proposeTime").css("display", "block");
+}
+function changeTimerValue(i){
+	count=i*60;
+	timer();
+	$("#proposeTime").css("display","none");
+}
 
 </script>
 	<title>Connect</title>
@@ -105,7 +113,7 @@ function yes2MeetingMoveConf(){
 <body onload="placeFriends()">
 <DIV class="container app-panel">
 	<div id="timerRow">
-		<button onclick="javascript:window.location.href='index.html'">CANCEL</button> <span id="timer" class="timer">30:00</span>
+		<button onclick="javascript:window.location.href='index.html'">CANCEL</button> <span id="timer" class="timer" onclick="showTimerUpdate()">30:00</span>
 	</div>
 	
 	<div class="map" id="map">
@@ -125,8 +133,20 @@ function yes2MeetingMoveConf(){
 		</div>
 		
 	</div>
+	<div id="proposeTime">
+		<div id="timePanel">
+			<div>How many minutes from now?</div>
+			<div id="timerControls">
+				<span class="timeValue minutes"><input type='number' value="30" id="minutes"></span>
+			</div>
+			<button onclick=javascript:$("#proposeTime").css("display","none");>cancel</button>
+			<button onclick=changeTimerValue($('#minutes')[0].value)>ok</button>
+		</div>
+	</div>
+
 	<script>
 		//$("#meeting")[0].addEventListener('touchstart', moveMeeting()); failed attempt to trap touch events; will come back to it.
+
 	</script>
 </body>
 
