@@ -65,19 +65,19 @@ button{
 	height:0;
 }
 #map img{position:relative;}
-#f0{top:-380px;left:160px;}
-#f1{top:-600px;left:40px;}
-#f2{top:-700px;left:90px;}
-#f3{top:-200px;left:120px;}
-#f4{top:-450px;left:200px;}
-#f5{top:-620px;left:259px;}
-#f6{top:-330px;left:300px;}
-#f7{top:-275px;left:95px;}
-#f8{top:-800px;left:47px;}
-#f9{top:-523px;left:90px;}
-#f10{top:-222px;left:22px;}
-#f11{top:-586px;left:123px;}
-#f12{top:-432px;left:200px;}
+#f0{width:25px;height:25px;top:-380px;left:160px;}
+#f1{width:25px;height:25px;top:-600px;left:40px;}
+#f2{width:25px;height:25px;top:-700px;left:90px;}
+#f3{width:25px;height:25px;top:-200px;left:120px;}
+#f4{width:25px;height:25px;top:-450px;left:200px;}
+#f5{width:25px;height:25px;top:-620px;left:259px;}
+#f6{width:25px;height:25px;top:-330px;left:300px;}
+#f7{width:25px;height:25px;top:-275px;left:95px;}
+#f8{width:25px;height:25px;top:-800px;left:47px;}
+#f9{width:25px;height:25px;top:-523px;left:90px;}
+#f10{width:25px;height:25px;top:-222px;left:22px;}
+#f11{width:25px;height:25px;top:-586px;left:123px;}
+#f12{width:25px;height:25px;top:-432px;left:200px;}
 #meeting{top:-390px; left:210px;}
 #newMeeting{
 	width: 411px;
