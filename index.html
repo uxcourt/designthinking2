@@ -72,21 +72,24 @@
 	</div>
 	<div class="row right"><a href="#">more&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a></div>
 	<div class="row center">
-		<button class="connectButton" disabled onclick="javascript:window.location.href='map.html'+'?fc='+friendCount">CONNECT</button>
+		<button class="connectButton" disabled onclick="javascript:window.location.href='map.html'+'?fc='+friendCount + '&fns='+ friendNames">CONNECT</button>
 	</div>
 </DIV>
 
 <script type="text/javascript">
 	var friendCount=0
+	var friendNames=""
 	$("img").click(function(){
 		if($(this).attr('src')=="images/icons/friend.png"){
 			$(this).attr("src","images/icons/friend-selected.png");
 				friendCount=friendCount+1
+				friendNames= $(this).next()[0].innerHTML + ";" +friendNames;
 				checkForSelection();
 		}
 		else{
 			$(this).attr("src","images/icons/friend.png");
-				friendCount=friendCount-1
+				friendCount=friendCount-1;
+				//friendNames.indexOf($(this).next().innerHTML)
 			checkForSelection();
 		}
 	});

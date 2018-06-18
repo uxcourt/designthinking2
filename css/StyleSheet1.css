@@ -64,28 +64,73 @@ button{
 #friendStaging{
 	height:0;
 }
-#map img{position:relative;}
-#f0{width:25px;height:25px;top:-280px;left:60px;}
-#f1{width:25px;height:25px;top:-600px;left:40px;}
-#f2{width:25px;height:25px;top:-700px;left:90px;}
-#f3{width:25px;height:25px;top:-200px;left:120px;}
-#f4{width:25px;height:25px;top:-450px;left:200px;}
-#f5{width:25px;height:25px;top:-620px;left:259px;}
-#f6{width:25px;height:25px;top:-330px;left:300px;}
-#f7{width:25px;height:25px;top:-275px;left:95px;}
-#f8{width:25px;height:25px;top:-800px;left:47px;}
-#f9{width:25px;height:25px;top:-523px;left:90px;}
-#f10{width:25px;height:25px;top:-122px;left:22px;}
-#f11{width:25px;height:25px;top:-586px;left:123px;}
-#f12{width:25px;height:25px;top:-232px;left:300px;}
-#meeting{top:-390px; left:210px;}
+#friendStaging img, #friendStaging div {
+	position:absolute;
+}
+#mapPlus{position:relative;overflow:scroll;width:411px;}
+#map img {position:absolute;}
+#map {overflow: hidden;}
+.fDetail{height:50px;width:100px;background-color: #ffffff;text-align: center;padding-top:.8em;display: none;}
+#f0{width:25px;height:25px;    top: 490px;
+    left: 104px;
+}
+#f0Detail{    top: 490px;
+    left: 104px;
+}
+#f1{width:25px;height:25px;    top: 50px;
+    left: 40px;}
+#f1Detail{    top: 50px;
+    left: 40px;}
+#f2{width:25px;height:25px;    top: 320px;
+    left: 90px;}
+/*add 10, add 65*/
+#f2Detail{    top: 320px;
+    left: 90px;}
+#f3{width:25px;height:25px;    top: 210px;
+    left: 63px;}
+#f3Detail{    top: 210px;
+    left: 63px;}
+#f4{width:25px;height:25px;top:60px;left:2060px;}
+#f4Detail{ top: -4660px; left: 212px;}
+#f5{width:25px;height:25px;    top: 280px;
+    left: 259px;}
+#f5Detail{    top: 280px;
+    left: 259px;}
+#f6{width:25px;height:25px;    top: 60px;
+    left: 3060px;}
+#f6Detail{     top: -1137px;
+    left: 3060px;}
+#f7{width:25px;height:25px;    top: 60px;
+    left: 175px;
+}
+#f7Detail{    top: 60px;
+    left: 175px;;}
+#f8{width:25px;height:25px;    top: 730px;
+    left: 337px;}
+#f8Detail{    top: 730px;
+    left: 337px;}
+#f9{width:25px;height:25px;top: 60px;
+    left: 339px;}
+#f9Detail{top: 60px;
+    left: 339px;}
+#f10{width:25px;height:25px;    top: 730px;
+    left: 22px;}
+#f10Detail{    top: 730px;
+    left: 22px;}
+#f11{width:25px;height:25px;     top: 620px;
+    left: 323px;}
+#f11Detail{    top: 620px;
+    left: 323px;}
+#f12{width:25px;height:25px;top:60px;left:3060px;}
+#f12Detail{top:-232px;left:300px;}
+#meeting{    top: 389px;
+    left: 340px;}
 #newMeeting{
 	width: 411px;
 	height:0px;
 	transition: height 1s ease-in-out;
 	position:fixed;
 	bottom:0px;
-	
 	margin-left:"-15px";
 	background-color: #ffffff;
 }
