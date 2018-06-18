@@ -10,6 +10,16 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 	<script src="scripts/connect.js"></script>
+	<script type="text/javascript">
+		
+   		setTimeout(loadAfterTime, 10000);
+
+
+function loadAfterTime() { 
+// code you need to execute goes here.
+$("#meetingChangeOverlay")[0].style.display="block";
+}
+	</script>
 	<link type="text/css" rel="stylesheet" href="css/StyleSheet1.css" />
 
 	<title>Connect</title>
@@ -34,7 +44,6 @@
 			<button onclick="no2MeetingMoveConf()">No</button>
 			<button onclick="yes2MeetingMoveConf()">Yes</button>
 		</div>
-		
 	</div>
 	<div id="proposeTime">
 		<div id="timePanel">
@@ -46,7 +55,17 @@
 			<button onclick=changeTimerValue($('#minutes')[0].value)>ok</button>
 		</div>
 	</div>
-
+	<div id="meetingChangeOverlay">
+		<div id="meetingChange">
+			<p>Thomas has proposed moving your meeting to:</p>
+			<p>1234 South Main Street, Anytown, USA</p>
+			<p>Do you want to meet there?</p>
+			<div class="center">
+				<button onclick=javascript:window.location='index.html';>No</button>
+				<button onclick=javascript:$('#meetingChangeOverlay')[0].style.display='none';>Yes</button>
+			</div>		
+		</div>
+	</div>
 	<script>
 		//$("#meeting")[0].addEventListener('touchstart', moveMeeting()); failed attempt to trap touch events; will come back to it.
 

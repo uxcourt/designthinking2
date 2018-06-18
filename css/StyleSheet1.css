@@ -134,7 +134,7 @@ button{
 	margin-left:"-15px";
 	background-color: #ffffff;
 }
-#proposeTime{
+#proposeTime, #meetingChangeOverlay{
 	position:absolute;
 	top:0;
     width: 411px;
@@ -143,7 +143,8 @@ button{
 	z-index:4;
 	display:none;
 }
-#timePanel{
+
+#timePanel, #meetingChange{
 	display:block;
 	position:relative;
 	left:80px;
@@ -153,6 +154,9 @@ button{
 	height:170px;
 	background-color: #ffffff;
 	padding:20px;
+}
+#meetingChange{
+	height: 240px;
 }
 #timerControls input{
 	width:40px;
