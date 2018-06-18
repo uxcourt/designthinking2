@@ -164,3 +164,13 @@ button{
 #timePanel button:last-of-type{
 	float:right;
 }
+.incoming{
+	background-color: aqua;
+    margin-left: 30%;
+}
+.incoming::after{
+    content: url(../images/icons/speech-friend-angle.png);
+    position: relative;
+    top: 9px;
+    left: 93%;
+}
